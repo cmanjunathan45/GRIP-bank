@@ -49,31 +49,19 @@ class _UserExampleState extends State<UserExample> {
             FlatButton(
               onPressed: () {
                 void _getTime() {
-                  final String formattedDateTime =
-                  DateFormat('MM/dd/yyyy \n kk:mm:ss').format(DateTime.now()).toString();
+                 
                   setState(() {
-                    _time = formattedDateTime;
+                    print(FirebaseFirestore.instance.collection("user_data").doc(user_id.toString()));
+                    FirebaseFirestore.instance.collection('user_data').add({
+                      "user_id": userIdController.text,
+                      "user_name": userNameController.text,
+                      "user_email": userEmailController.text,
+                      "account_balance": accountBalanceController.text,
+                      });
                   });
-                  print(_time);
+                  
                 }
-                DateTime currentPhoneDate = DateTime.now(); //DateTime
-
-                Timestamp myTimeStamp = Timestamp.fromDate(currentPhoneDate); //To TimeStamp
-
-                DateTime myDateTime = myTimeStamp.toDate(); // TimeStamp to DateTime
-
-                print("current phone data is: $currentPhoneDate");
-                print("current phone data is: $myDateTime");
-                print(DateTime.parse(myTimeStamp.toDate().toString()));
-                // _getTime();
-
-                // print(FirebaseFirestore.instance.collection("user_data").doc(user_id.toString()));
-                // FirebaseFirestore.instance.collection('user_data').add({
-                //   "user_id": userIdController.text,
-                //   "user_name": userNameController.text,
-                //   "user_email": userEmailController.text,
-                //   "account_balance": accountBalanceController.text,
-                // });
+        
               },
               child: Text(
                 "Add Data",
