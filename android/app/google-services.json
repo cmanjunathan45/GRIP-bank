@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "421669302771",
+    "project_id": "gripbankapp",
+    "storage_bucket": "gripbankapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:421669302771:android:525a719ee7d972b9ec6286",
+        "android_client_info": {
+          "package_name": "com.gripf.basic_banking_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "421669302771-gtauaf2c2p7d4rn5liicoa3k3o89s3ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4rdpxd07MqxJlzGoi5K7GWmtWJWkmtcY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "421669302771-gtauaf2c2p7d4rn5liicoa3k3o89s3ai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
